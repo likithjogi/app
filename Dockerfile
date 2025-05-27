@@ -1,12 +1,12 @@
 FROM python:3.10-apline
 
-COPY ./src/requirements.txt /tmp
+COPY src/requirements.txt /tmp
 
 RUN  pip install -r /tmp/requirements.txt
 
-COPY ./src /src
+COPY src/app.py /opt/
 
-CMD python /src/app.py
+CMD python /opt/app.py
 
 
 
